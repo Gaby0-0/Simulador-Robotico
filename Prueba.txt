@@ -1,0 +1,34 @@
+#Ejemplo de código para probar el robot en el simulador:
+
+Robot r1
+r1.base = 100
+r1.velocidad =1
+r1.brazo = 35
+r1.velocidad =1
+r1.garra = 45
+r1.velocidad =1
+r1.codo = 20
+r1.velocidad =1
+r1.codo = 0
+r1.velocidad =1
+r1.garra = 0
+r1.velocidad =1
+r1.brazo = 0
+r1.velocidad =1
+r1.base = 0
+r1.velocidad =1
+
+r1.repetir = 2{
+r1.base = -100
+r1.velocidad =1
+r1.brazo = -35
+r1.velocidad =1
+r1.garra = -45
+r1.velocidad =1
+r1.garra = 0
+r1.velocidad =1
+r1.brazo = 0
+r1.velocidad =1
+r1.base = 0
+r1.velocidad =1
+}

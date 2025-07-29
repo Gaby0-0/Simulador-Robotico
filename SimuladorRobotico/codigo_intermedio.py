@@ -134,7 +134,7 @@ class CodigoIntermedio:
                     codigo_ex.append(generar_puerto_izquierda(elementos_asm[0],aux, d[3]))
                     cont_rep_componentes[2] = 0
                     restas [2]  = elementos_asm[1]
-                    #codigo necesario para mover el brazo  del robot
+                    #codigo necesario para mover la base  del robot
                     if not bucle :
                         robot.mueveBase(elementos_asm[1],d[3])  
                     else:
@@ -143,20 +143,21 @@ class CodigoIntermedio:
                     aux = int(elementos_asm[1]) - int(restas[2])
                     codigo_ex.append(generar_puerto_derecha(elementos_asm[0], aux, d[3]))
                     restas[2] = elementos_asm[1]
-                    #codigo necesario para mover el brazo  del robot
+                    #codigo necesario para mover la base  del robot
                     if not bucle :
                         robot.mueveBase(elementos_asm[1],d[3])  
                     else:
                         bucle_instrucciones_robot.append(f"{elementos_asm[0]},{elementos_asm[1] },{d[3]}")  
 
                 if cont_rep_componentes [3] == 2 and componente_actual == "codo":
-                    
+                    #codigo necesario para mover el codo  del robot
                     if not bucle :
                         robot.mueveCodo(elementos_robot[1],d[3])  
                     else:
                         bucle_instrucciones_robot.append(f"{elementos_robot[0]},{elementos_robot[1]},{d[3]}") 
                     cont_rep_componentes[3] = 0
                 elif componente_actual == "codo":
+                      #codigo necesario para mover el codo  del robot
                     if not bucle :
                         robot.mueveCodo(elementos_robot[1],d[3])  
                     else:

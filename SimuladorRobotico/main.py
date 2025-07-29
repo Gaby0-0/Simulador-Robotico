@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from parser import analizar_linea
 import ply.lex as lex
-import lexer  # tu archivo lexer.py debe tener los tokens
+import lexer  
 from parser import reiniciar_estado
 from codigo_intermedio import CodigoIntermedio
 
@@ -71,7 +71,7 @@ def analizar():
                     bloque_codigo.append(lin)
                     lineas_subbloque.append(i + 1)  # Guardar número real de línea
                     i += 1
-                i += 1  # Para saltar la línea de la llave cerrada
+                i += 1  
 
                 if not llave_cerrada:
                     errores_sintacticos = True
@@ -271,7 +271,7 @@ text_input.bind("<Configure>", actualizar_numeros_linea)
 
 actualizar_numeros_linea()
 
-# Crear un frame horizontal para el botón y las etiquetas
+# Frame horizontal para el botón y las etiquetas
 frame_superior = tk.Frame(frame_izquierda)
 frame_superior.pack(fill=tk.X, pady=5)
 
@@ -279,8 +279,6 @@ frame_superior.pack(fill=tk.X, pady=5)
 btn_analizar = tk.Button(frame_superior, text="Analizar", command=analizar,
                          font=("Segoe UI", 10), bg="#4CAF50", fg="white", padx=30, pady=5)
 btn_analizar.pack(side=tk.LEFT)
-
-
 
 
 frame_tabla = tk.Frame(frame_izquierda)

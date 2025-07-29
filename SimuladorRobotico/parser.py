@@ -22,7 +22,7 @@ def p_declaracion_robot(p):
     if nombre_robot in robots_declarados:
         resultados.append(("❌ Inválida", f"Robot '{nombre_robot}' ya ha sido declarado.", nombre_robot, 'Declaración', [], 'Robot'))
 
-    # Aún así lo devuelve como resultado para la tabla_info
+    #Lo devuelve como resultado para la tabla_info, incluso si hay error o no.
     p[0] = (nombre_robot, 'Declaración', [], 'Robot')
 
     # Solo añade si no estaba antes
