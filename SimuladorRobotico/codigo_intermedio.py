@@ -403,7 +403,6 @@ def generar_codigo_completo(codigo_extra):
 
     contenido = "\n".join(codigo)
 
-    # Ruta donde deseas guardar el archivo
     ruta_archivo = "C:/DOSBox2/Tasm/PROG/programa.asm"  
 
     # Guardar en el archivo
